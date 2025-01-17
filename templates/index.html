@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lemniscote Downloader</title>
     <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" href="static/Pic/images.png" type="image/x-icon">
 </head>
 
 <body>
@@ -20,17 +21,33 @@
                 <option value="mp4">MP4</option>
                 <option value="mkv">MKV</option>
                 <option value="webm">Webm</option>
-            </select><br>
-
+            </select>
             <label for="quality">Choose Quality:</label>
             <select name="quality" id="quality">
                 <option value="best">Best</option>
                 <option value="medium">Medium</option>
                 <option value="worst">Worst</option>
-            </select><br>
+            </select>
+            <div class="checkbox-group">
+                <label for="only_audio">Download Only Audio:</label>
+                <input type="checkbox" name="only_audio" id="only_audio">
+            </div>
+            <div class="checkbox-group">
+                <label for="download_thumbnail">Download Thumbnail:</label>
+                <input type="checkbox" name="download_thumbnail" id="download_thumbnail">
+            </div>
 
             <button type="submit">Download</button>
         </form>
+    </div>
+    <div class="footer">
+        <a href="https://github.com/Pooyan013" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.175c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.758-1.333-1.758-1.09-.744.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.774.418-1.305.76-1.605-2.665-.306-5.466-1.335-5.466-5.93 0-1.31.467-2.382 1.235-3.222-.123-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.005-.404 1.022.005 2.048.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.241 2.874.118 3.176.77.84 1.235 1.912 1.235 3.222 0 4.609-2.803 5.62-5.475 5.92.43.372.813 1.102.813 2.222v3.293c0 .319.218.694.825.576 4.765-1.588 8.2-6.084 8.2-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+            GitHub
+        </a>
     </div>
 </body>
 
