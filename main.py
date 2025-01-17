@@ -14,10 +14,10 @@ DOWNLOAD_DIR ="downloads/"
 if not os.path.exists(DOWNLOAD_DIR):
     os.makedirs(DOWNLOAD_DIR)
 
-def downlaod_video(url:str):
+def downlaod_video(url:str,format:str ,quality:str):
     ydl_opts={
         "outtmpl":f"{DOWNLOAD_DIR}%(title)s.%(ext)s",
-        "format":"best"
+        "format":f"{quality}[ext={format}]"
     }
     with YoutubeDL(ydl_opts) as ydl:
         info =ydl.extract_info(url, download=True)
@@ -30,9 +30,9 @@ async def index(request: Request):
 
 
 @app.get("/download/")
-async def download(request:Request,url):
+async def download(request:Request, url ,format, quality):
     try:
-        file_path = downlaod_video(url)
+        file_path = downlaod_video(url, format, quality)
         file_name = os.path.basename(file_path)
         return FileResponse(file_path,filename=file_name,media_type="application/octet-stream")
     except Exception as e:

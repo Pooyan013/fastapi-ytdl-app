@@ -12,6 +12,20 @@
     <form action="/download/" method="get">
         <label for="url"> Enter Youtube URL:</label>
         <input type="text" name="url" id="url" required placeholder="https://www.youtube.com">
+
+        <label for="format">Choose Format:</label>
+        <select name="format" id="format">
+            <option value="mp4">MP4</option>
+            <option value="mkv">MKV</option>
+            <option value="webm">Webm</option>
+        </select><br><br>
+
+        <label for="quality">Choose Quality:</label>
+        <select name="quality" id="quality">
+            <option value="best">best</option>
+            <option value="medium">medium</option>
+            <option value="worst">worst</option>
+        </select><br><br>
         <button type="submit">Download</button>
     </form>
 </body>
