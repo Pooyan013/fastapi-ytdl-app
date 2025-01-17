@@ -4,30 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lemniscote</title>
+    <title>Lemniscote Downloader</title>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 
 <body>
-    <h1>Lemniscote Downloader:</h1>
-    <form action="/download/" method="get">
-        <label for="url"> Enter Youtube URL:</label>
-        <input type="text" name="url" id="url" required placeholder="https://www.youtube.com">
+    <div class="container">
+        <h1>Lemniscote Downloader</h1>
+        <form action="/download/" method="get">
+            <label for="url">Enter Youtube URL:</label>
+            <input type="text" name="url" id="url" required placeholder="https://www.youtube.com">
 
-        <label for="format">Choose Format:</label>
-        <select name="format" id="format">
-            <option value="mp4">MP4</option>
-            <option value="mkv">MKV</option>
-            <option value="webm">Webm</option>
-        </select><br><br>
+            <label for="format">Choose Format:</label>
+            <select name="format" id="format">
+                <option value="mp4">MP4</option>
+                <option value="mkv">MKV</option>
+                <option value="webm">Webm</option>
+            </select><br>
 
-        <label for="quality">Choose Quality:</label>
-        <select name="quality" id="quality">
-            <option value="best">best</option>
-            <option value="medium">medium</option>
-            <option value="worst">worst</option>
-        </select><br><br>
-        <button type="submit">Download</button>
-    </form>
+            <label for="quality">Choose Quality:</label>
+            <select name="quality" id="quality">
+                <option value="best">Best</option>
+                <option value="medium">Medium</option>
+                <option value="worst">Worst</option>
+            </select><br>
+
+            <button type="submit">Download</button>
+        </form>
+    </div>
 </body>
 
 </html>
