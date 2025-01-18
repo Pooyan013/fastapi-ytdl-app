@@ -4,7 +4,7 @@ from fastapi.staticfiles import StaticFiles
 import os
 from fastapi.responses import FileResponse
 from yt_dlp import YoutubeDL
-import uvicorn  # اضافه کردن uvicorn برای راه‌اندازی برنامه
+import uvicorn  
 
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
